@@ -1,25 +1,35 @@
-.titulo {
-  color: purple;
-  width: 310 px;
-  height: 50 px;
-  background-color:#FEE7F8 ;
-  
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+body {
+  font-family: "Sekuya", system-ui;
+  background-color:pink ;
 }
-
 #seleccionar-mascota {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.titulo {
+  color: purple;
+  font-size: 50px;
+
+}
+.subtitulo {
+      font-size: 24px;
+}
+
+
+.tarjetas {
+  display:flex;
+  gap:10px;
+}
 .tarjeta-de-mokepon {
-    width: 100px;
+    width: 150px;
     height: 100px;
     background: mediumvioletred;
     padding: 10px;
     box-sizing: border-box;
-    margin: 10px;
-    border: 1px solid black;
+    border-radius: 20px;
 }
 input {
   display: none;
