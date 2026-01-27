@@ -24,13 +24,21 @@ body {
   gap:10px;
 }
 .tarjeta-de-mokepon {
-    width: 150px;
+    width: 210px;
     height: 100px;
     background: mediumvioletred;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }
+.tarjeta-de-mokepon img{
+  width: 80px;
+}
+
 input {
   display: none;
 }
