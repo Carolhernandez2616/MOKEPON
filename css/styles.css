@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sekuya&display=swap');
 body {
   font-family: "Sekuya", system-ui;
   background-color:pink ;
@@ -37,6 +37,17 @@ body {
 }
 .tarjeta-de-mokepon img{
   width: 80px;
+}
+
+#boton-mascota{
+  width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgb(194, 213, 237);
+    border: 2px solid black;
+    color: black;
+    font-family: "Lobster", sans-serif;
+    margin-top: 30px
 }
 
 input {
