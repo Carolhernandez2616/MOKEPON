@@ -5,7 +5,7 @@ let vidasEnemigo = 3
 
 
 function iniciarJuego (){
-  let sectionSeleccionarAtaque = document.getElementById(" seleccionar-ataque ")
+  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
   sectionSeleccionarAtaque.style.display = "none"
   
   let sectionReiniciar= document.getElementById("Reiniciar")
@@ -29,11 +29,11 @@ function iniciarJuego (){
 
 
 function seleccionarMascotaJugador (){
-     let sectionSeleccionarMascota = document.getElementById(" seleccionar-mascota ")
+     let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
   sectionSeleccionarMascota.style.display = "none"
   
   
-  let sectionSeleccionarAtaque = document.getElementById(" seleccionar-ataque ")
+  let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
   sectionSeleccionarAtaque.style.display = "block"
 
   
