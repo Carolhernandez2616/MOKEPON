@@ -73,3 +73,20 @@ input {
   font-family: "Press Start 2P", system-ui;
 
 }
+#mensajes{
+  width: 280px;
+  background: #B0FFFA;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#boton-Reiniciar {
+  border: black;
+  color:black;
+  font-family: "Press Start 2P", system-ui;
+  background-color:lavender ;
+}

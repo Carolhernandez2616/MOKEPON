@@ -132,34 +132,37 @@ function ataqueAleatorioEnemigo() {
  }
  function revisarVidas() {
    if (vidasEnemigo == 0) { 
-     crearMensajeFinal("FELICITACIONES!  GANASTE :)")
+     crearMensajeFinal(" FELICITACIONES!  GANASTE :)")
      }else if (vidasJugador == 0) {
       crearMensajeFinal("Lo Siento,PERDISTE :(")
    }
  }
  
 function crearMensaje(resultado){
-  let sectionMensajes = document.getElementById("mensajes")
+  let sectionMensajes = document.getElementById("resultado")
+  let ataquesDelJugador = document.getElementById("ataques-del-jugador")
+  let ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
+
+ 
+  let nuevoAtaqueDelJugador = document.createElement("p")
+  let nuevoAtaqueDelEnemigo = document.createElement("p")
+
+  sectionMensajes.innerHTML = resultado
+  nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+  nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
   
   
-  
-  let parrafo = document.createElement("p")
-  parrafo.innerHTML = "Tu mascota ataco con "+  ataqueJugador + ",la mascota del enemigo ataco con "+ ataqueEnemigo + " - "+ resultado
-  
-  
-  sectionMensajes.appendChild(parrafo)
+  ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+  ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+
+
 }  
 
 function crearMensajeFinal(resultadoFinal){
-  let sectionMensajes = document.getElementById("mensajes")
+  let sectionMensajes = document.getElementById("resultado")
   
-  
-  
-  let parrafo = document.createElement("p")
-  parrafo.innerHTML = resultadoFinal
-  
-  
-  sectionMensajes.appendChild(parrafo)
+  sectionMensajes.innerHTML = resultadoFinal
   
   let botonFUEGO = document.getElementById("boton-FUEGO")
   botonFUEGO.disabled = true
