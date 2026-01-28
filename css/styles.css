@@ -23,7 +23,7 @@ body {
 }
 
 
-.tarjetas {
+.tarjetas, .tarjetas-ataques {
   display:flex;
   gap:10px;
 }
@@ -92,5 +92,22 @@ input {
 }
 .ataques {
 display: grid;
-grid-template-columns: 100px 100px;
+grid-template-columns: 150px 150px;
+}
+
+#Vidas-jugador, #Vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 200px){
+  .tarjetas, .tarjetas-ataques{
+    flex-direction:column;
+  }
 }
