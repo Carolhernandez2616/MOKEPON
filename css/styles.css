@@ -90,3 +90,7 @@ input {
   font-family: "Press Start 2P", system-ui;
   background-color:lavender ;
 }
+.ataques {
+display: grid;
+grid-template-columns: 100px 100px;
+}
