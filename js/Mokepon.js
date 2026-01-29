@@ -132,7 +132,7 @@ function ataqueAleatorioEnemigo() {
  }
  function revisarVidas() {
    if (vidasEnemigo == 0) { 
-     crearMensajeFinal(" FELICITACIONES!  GANASTE :)")
+     crearMensajeFinal(" FELICITACIONES! GANASTE :)")
      }else if (vidasJugador == 0) {
       crearMensajeFinal("Lo Siento,PERDISTE :(")
    }
