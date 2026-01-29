@@ -22,7 +22,7 @@ const sectionMensajes = document.getElementById("resultado")
 const ataquesDelJugador = document.getElementById("ataques-del-jugador")
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
-
+let mokepones = []
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
@@ -40,6 +40,9 @@ let Hipodoge = new MOKEPON("Hipodoge", "./assets/HIPODOGE.png", 5)
 let Capipepo = new MOKEPON("Capipepo", "./assets/CAPIPEPO.png", 5)
 let Ratigueya = new MOKEPON("Ratigueya", "./assets/RATIGUEYA.png", 5)
 
+mokepones.push(Hipodoge,Capipepo,Ratigueya)
+
+console.log(mokepones)
 
 function iniciarJuego (){
   
@@ -186,6 +189,6 @@ function reiniciarJuego (){
 
 function aleatorio(min, max){
   return Math.floor(Math.random() *(max -min +1) + min)
-}const
+}
 
 window.addEventListener('load' , iniciarJuego)
