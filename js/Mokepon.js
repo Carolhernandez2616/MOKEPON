@@ -121,7 +121,7 @@ function seleccionarMascotaEnemigo(){
   let mascotaAleatoria = aleatorio(0,mokepones.length -1)
   
   
-  spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatoria].nombre
+  spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatoria].nombre.mascotaAleatoria
       
     
 }
