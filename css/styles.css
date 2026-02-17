@@ -16,7 +16,7 @@ body {
 }
 .titulo {
   color: deeppink;
-  font-size: 70px;
+  font-size: 60px;
   -webkit-text-stroke: 3px black;
 
 }
@@ -115,6 +115,15 @@ grid-template-columns: 150px 150px;
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#mapa {
+  border: 2px solid black;
+  
 }
 
 @media (max-width: 200px){
