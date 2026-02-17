@@ -33,6 +33,8 @@ let botonFUEGO
 let botonAGUA 
 let botonTIERRA 
 let botones = []
+let indexAtaqueJugador
+let indexAtaqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -188,7 +190,7 @@ function ataqueAleatorioEnemigo() {
   if (ataqueAleatorio == 0 || ataqueAleatorio ==1){
     ataqueEnemigo.push("FUEGO")
     
-  }else if (ataqueAleatorio == 3|| ataqueAleatorio ==4){
+  }else if (ataqueAleatorio == 3|| ataqueAleatorio == 4){
     ataqueEnemigo.push("AGUA")
     
   }else {
@@ -196,33 +198,29 @@ function ataqueAleatorioEnemigo() {
     
  }
  console.log(ataqueEnemigo)
- combate()
+ iniciarPelea()
+}
+function iniciarPelea(){
+  if (ataqueJugador.length === 5) {
+    combate()
+  }
+}
+
+function indexAmbosOponentes(Jugador, enemigo){
+  indexAtaqueJugador = ataqueEnemigo[Jugador]
+  indexAtaqueEnemigo = ataqueEnemigo[enemigo]
+
 }
  
  function combate (){
- 
-   
-   
-        if(ataqueEnemigo == ataqueJugador){
-          crearMensaje("EMPATE ")
-        }else if(ataqueJugador == "FUEGO" && ataqueEnemigo == "TIERRA"){
-          crearMensaje("GANASTE ")
-          vidasEnemigo--
-          spanVidasEnemigo.innerHTML = vidasEnemigo
-        }else if(ataqueJugador == "AGUA" && ataqueEnemigo == "FUEGO"){
-          crearMensaje("GANASTE ")
-          vidasEnemigo--
-          spanVidasEnemigo.innerHTML = vidasEnemigo
-        }else if(ataqueJugador == "TIERRA" && ataqueEnemigo == "AGUA"){
-          crearMensaje("GANASTE ")
-          vidasEnemigo--
-          spanVidasEnemigo.innerHTML = vidasEnemigo
-        }else{
-          crearMensaje("PERDISTE ")
-          vidasJugador--
-          spanVidasJugador.innerHTML = vidasJugador
-        }
-        revisarVidas()
+  for (let index = 0; index < ataqueJugador.length; index++) {
+    if(ataqueJugador[index] === ataqueEnemigo[index]) {
+      indexAmbosOponentes(index, index)
+      crearMensaje("EMPATE")
+    }
+    
+  }
+    revisarVidas()
         
  }
  function revisarVidas() {
@@ -238,8 +236,8 @@ function crearMensaje(resultado){
   let nuevoAtaqueDelEnemigo = document.createElement("p")
 
   sectionMensajes.innerHTML = resultado
-  nuevoAtaqueDelJugador.innerHTML = ataqueJugador
-  nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+  nuevoAtaqueDelJugador.innerHTML = indexAtaqueJugador
+  nuevoAtaqueDelEnemigo.innerHTML = indexAtaqueEnemigo
   ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
   ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 
