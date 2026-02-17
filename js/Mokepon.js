@@ -160,14 +160,17 @@ function secuenciaAtaque() {
           ataqueJugador.push("FUEGO")
           console.log(ataqueJugador)
           boton.style.background = '#112f58'
+          boton.disabled = true
       } else if (e.target.textContent === "💧") {
         ataqueJugador.push("AGUA")
         console.log(ataqueJugador)
         boton.style.background = '#112f58'
+        boton.disabled = true
       } else{
         ataqueJugador.push("TIERRA")
         console.log(ataqueJugador)
         boton.style.background = '#112f58'
+        boton.disabled = true
       }
       ataqueAleatorioEnemigo()
     })
@@ -192,7 +195,7 @@ function ataqueAleatorioEnemigo() {
   if (ataqueAleatorio == 0 || ataqueAleatorio ==1){
     ataqueEnemigo.push("FUEGO")
     
-  }else if (ataqueAleatorio == 3|| ataqueAleatorio == 4){
+  }else if (ataqueAleatorio == 3 || ataqueAleatorio == 4){
     ataqueEnemigo.push("AGUA")
     
   }else {
@@ -219,9 +222,6 @@ function indexAmbosOponentes(Jugador, enemigo){
     if(ataqueJugador[index] === ataqueEnemigo[index]) {
       indexAmbosOponentes(index, index)
       crearMensaje("EMPATE")
-      victoriasJugador++
-      spanVidasJugador.innerHTML = victoriasJugador
-    
      } else if (ataqueJugador[index] === "FUEGO" && ataqueEnemigo[index] === "TIERRA") {
       indexAmbosOponentes(index, index)
       crearMensaje("GANASTE")
@@ -265,6 +265,7 @@ function indexAmbosOponentes(Jugador, enemigo){
    }else{
     crearMensaje("lO SIENTO, PERDISTE :(")
    }
+   sectionReiniciar.style.display = "block"
  }
  
 function crearMensaje(resultado){
@@ -283,12 +284,7 @@ function crearMensaje(resultado){
 
 function crearMensajeFinal(resultadoFinal){
   sectionMensajes.innerHTML = resultadoFinal
-  
-  botonFUEGO.disabled = true
-  
-  botonAGUA.disabled= true
-  
-  botonTIERRA.disabled = true
+
   
   sectionReiniciar.style.display = "block"
   
