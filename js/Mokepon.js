@@ -97,6 +97,15 @@ Hipodoge.ataques.push (
   {nombre: "☘️", id: "boton-TIERRA"},
 
 )
+
+HipodogeEnemigo.ataques.push (
+  {nombre: "💧", id: "boton-AGUA"},
+  {nombre: "💧", id: "boton-AGUA"},
+  {nombre: "💧", id: "boton-AGUA"},
+  {nombre: "🔥", id: "boton-FUEGO"},
+  {nombre: "☘️", id: "boton-TIERRA"},
+
+)
 Capipepo.ataques.push (
   {nombre: "☘️", id: "boton-TIERRA"},
   {nombre: "☘️", id: "boton-TIERRA"},
@@ -106,7 +115,23 @@ Capipepo.ataques.push (
   
 
 )
+CapipepoEnemigo.ataques.push (
+  {nombre: "☘️", id: "boton-TIERRA"},
+  {nombre: "☘️", id: "boton-TIERRA"},
+  {nombre: "☘️", id: "boton-TIERRA"},
+  {nombre: "💧", id: "boton-AGUA"},
+  {nombre: "🔥", id: "boton-FUEGO"},
+  
+
+)
 Ratigueya.ataques.push (
+  {nombre: "🔥", id: "boton-FUEGO"},
+  {nombre: "🔥", id: "boton-FUEGO"},
+  {nombre: "🔥", id: "boton-FUEGO"},
+  {nombre: "☘️", id: "boton-TIERRA"},
+  {nombre: "💧", id: "boton-AGUA"},
+)
+RatigueyaEnemigo.ataques.push (
   {nombre: "🔥", id: "boton-FUEGO"},
   {nombre: "🔥", id: "boton-FUEGO"},
   {nombre: "🔥", id: "boton-FUEGO"},
@@ -144,7 +169,7 @@ function seleccionarMascotaJugador (){
   
   sectionSeleccionarMascota.style.display = "none"
 
-  //sectionSeleccionarAtaque.style.display = "flex"
+  
 
   if(inputHipodoge.checked){
     spanMascotaJugador.innerHTML = inputHipodoge.id
@@ -162,7 +187,7 @@ function seleccionarMascotaJugador (){
   extraerAtaques(mascotaJugador)
   sectionVerMapa.style.display = "flex"
   iniciarMapa()
-  seleccionarMascotaEnemigo()
+  
 
 
 }
@@ -442,7 +467,11 @@ function revisarColision(enemigo) {
     return
   }
   detenerMovimiento()
-  alert("Hay colision  "+ enemigo.nombre)
+  clearInterval(intervalo)
+  sectionSeleccionarAtaque.style.display = "flex"
+  sectionVerMapa.style.display = "none"
+  seleccionarMascotaEnemigo(enemigo)
+
 
 }
 window.addEventListener('load' , iniciarJuego)
