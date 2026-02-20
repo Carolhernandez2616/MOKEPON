@@ -121,10 +121,7 @@ grid-template-columns: 150px 150px;
   align-items: center;
   justify-content: center;
 }
-#mapa {
-  border: 2px solid black;
-  background-color: #EE6983;
-}
+
 
 @media (max-width: 200px){
   .tarjetas, .tarjetas-ataques{
