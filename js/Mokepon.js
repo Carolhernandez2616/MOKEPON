@@ -53,7 +53,7 @@ let mapaBackground = new Image()
 mapaBackground.src = "./assets/labe.jpeg"
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
-const anchoMaximoDelMapa = 350
+const anchoMaximoDelMapa = 1600
 
 if (anchoDelMapa > anchoMaximoDelMapa) {
   anchoDelMapa = anchoMaximoDelMapa - 70
@@ -71,8 +71,8 @@ class MOKEPON {
     this.foto = foto
     this.vida = vida
     this.ataques = []
-    this.ancho = 150
-    this.alto = 150
+    this.ancho =100
+    this.alto = 100
     this.x = aleatorio(0, mapa.width - this.ancho)
     this.y = aleatorio(0, mapa.height - this.alto)
     this.mapaFoto = new Image()
@@ -437,8 +437,7 @@ function sePresionoUnaTecla(event) {
   }
 }
 function iniciarMapa(){
-    mapa.width = 1800
-    mapa.height = 1000
+
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
     intervalo = setInterval(pintarCanvas, 50)
 

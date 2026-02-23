@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Lobster&family=Press+Start+2P&family=Sekuya&display=swap'); 
 body {
  font-family: "Sekuya", system-ui;
- background-color: lavender;
+ background: linear-gradient(135deg, #412497, #9fe2ed);
 }
   
 
@@ -121,10 +121,27 @@ grid-template-columns: 150px 150px;
   align-items: center;
   justify-content: center;
 }
-
-
-@media (max-width: 200px){
+#ver-mapa button{
+  width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    background:linear-gradient(#971989, rgb(12, 12, 232)) ;
+    border: 2px solid black;
+    color: black;
+    font-family: "Press Start 2P", system-ui;
+    margin-top: 10px
+}
+@media (max-width: 560px){
   .tarjetas, .tarjetas-ataques{
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 300px){
+  #ver-mapa div{
+    display: flex;
+    align-items: center;
     flex-direction:column;
   }
 }
