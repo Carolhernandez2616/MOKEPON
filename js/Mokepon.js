@@ -4,7 +4,7 @@ const sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
 const sectionReiniciar= document.getElementById("Reiniciar")
 const botonMascotaJugador = document.getElementById('boton-mascota')
 const botonReiniciar = document.getElementById ("boton-Reiniciar")
-sectionReiniciar.style.display = "none"
+ sectionReiniciar.style.display = "none"
 
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
 const spanMascotaJugador = document.getElementById('Mascota-jugador')
